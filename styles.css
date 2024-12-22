@@ -1,0 +1,392 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #444;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Main content styling */
+main {
+    padding: 2rem;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* About Me section styling */
+#about-me {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about-me p {
+    margin-bottom: 1rem;
+}
+
+/* Projects section styling */
+#projects {
+    text-align: center;
+}
+
+.filter-buttons {
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #555;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+}
+
+.project figure {
+    margin: 0;
+}
+
+.project img, .project video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.project figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.project h3 {
+    margin-top: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.project p {
+    margin-top: 0.5rem;
+}
+
+/* Skills list styling */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    background: #e2e2e2;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    position: relative;
+    padding-left: 2rem;
+}
+
+#skills ul li::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+#skills ul li.html::before {
+    content: '\f13b'; /* Font Awesome icon for HTML5 */
+    color: #e34c26;
+}
+
+#skills ul li.css::before {
+    content: '\f13c'; /* Font Awesome icon for CSS3 */
+    color: #1572b6;
+}
+
+#skills ul li.javascript::before {
+    content: '\f3b8'; /* Font Awesome icon for JavaScript */
+    color: #f7df1e;
+}
+
+#skills ul li.react::before {
+    content: '\f41b'; /* Font Awesome icon for React */
+    color: #61dafb;
+}
+
+#skills ul li.nodejs::before {
+    content: '\f3d3'; /* Font Awesome icon for Node.js */
+    color: #68a063;
+}
+
+#skills ul li.python::before {
+    content: '\f3e2'; /* Font Awesome icon for Python */
+    color: #3776ab;
+}
+
+#skills ul li.java::before {
+    content: '\f4e4'; /* Font Awesome icon for Java */
+    color: #007396;
+}
+
+#skills ul li.sql::before {
+    content: '\f1c0'; /* Font Awesome icon for Database */
+    color: #f29111;
+}
+
+#skills ul li.git::before {
+    content: '\f1d3'; /* Font Awesome icon for Git */
+    color: #f05032;
+}
+
+#skills ul li.agile::before {
+    content: '\f0e7'; /* Font Awesome icon for Agile */
+    color: #ffcc00;
+}
+
+/* Contact form styling */
+#contact form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact form div {
+    margin-bottom: 1rem;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+#contact button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Lightbox styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .project {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .project {
+        flex: 1 1 calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    #about-me {
+        padding: 1rem;
+    }
+
+    .project h3 {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a computer science student from Spain, showcasing projects, skills, and contact information.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Projects, Skills, Contact">
+    <meta name="author" content="Your Name">
+    <title>Portfolio of a Computer Science Student</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Web Page</h1>
+        <nav role="navigation">
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to the home section.</p>
+        </section>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>I am a computer science student from Spain, passionate about technology and software development. I enjoy learning new programming languages and working on innovative projects.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="filter-buttons">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('web')">Web Development</button>
+                <button onclick="filterProjects('mobile')">Mobile Development</button>
+                <button onclick="filterProjects('ml')">Machine Learning</button>
+            </div>
+            <div class="projects-container">
+                <article class="project web">
+                    <figure>
+                        <img src="project1.jpg" alt="Screenshot of a web application developed using HTML, CSS, and JavaScript" onclick="openLightbox(this)">
+                        <figcaption>Project 1</figcaption>
+                    </figure>
+                    <h3>Project 1 Title</h3>
+                    <p>This is a brief description of Project 1. It involves developing a web application using HTML, CSS, and JavaScript.</p>
+                </article>
+                <article class="project mobile">
+                    <figure>
+                        <img src="project2.jpg" alt="Screenshot of a mobile app developed using React Native" onclick="openLightbox(this)">
+                        <figcaption>Project 2</figcaption>
+                    </figure>
+                    <h3>Project 2 Title</h3>
+                    <p>This is a brief description of Project 2. It focuses on creating a mobile app using React Native.</p>
+                </article>
+                <article class="project ml">
+                    <figure>
+                        <img src="project3.jpg" alt="Screenshot of a machine learning model developed using Python" onclick="openLightbox(this)">
+                        <figcaption>Project 3</figcaption>
+                    </figure>
+                    <h3>Project 3 Title</h3>
+                    <p>This is a brief description of Project 3. It involves building a machine learning model using Python.</p>
+                </article>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li class="html">HTML</li>
+                <li class="css">CSS</li>
+                <li class="javascript">JavaScript</li>
+                <li class="react">React</li>
+                <li class="nodejs">Node.js</li>
+                <li class="python">Python</li>
+                <li class="java">Java</li>
+                <li class="sql">SQL</li>
+                <li class="git">Git</li>
+                <li class="agile">Agile Methodologies</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post" onsubmit="return validateForm()">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span id="name-error" class="error-message"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="email-error" class="error-message"></span>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <span id="message-error" class="error-message"></span>
+                </div>
+                <div>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Web Page</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
